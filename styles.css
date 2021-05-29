@@ -1,0 +1,178 @@
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+body{
+  font-family: 'Commissioner', sans-serif;
+  background-color: beige;
+}
+
+.bold-text{
+  font-weight: 600;
+  color: black;
+  
+}
+
+p{
+  color: hsl(0, 0%, 48%);
+  line-height: 30px;
+}
+
+.nav-bg{
+  position: absolute;
+  width:100%;
+}
+
+.nav-bg img{
+  width:100%;
+}
+
+.logo{
+  color:white;
+}
+
+.nav-link{
+  color:white;
+}
+
+.nav-options{
+  display:flex;
+  justify-content: end;
+  margin-left:70%;
+}
+
+.container{
+  position: relative;
+  z-index:1;
+}
+
+.heading, .tracker-container, .the-project, .product{
+  margin-bottom: 20px;
+  background-color: white;
+  width:90%;
+}
+
+.heading{
+  margin-top: 280px;
+
+}
+
+.buttons{
+  margin-top: 30px;
+}
+
+.btn{
+  background-color: hsl(176, 50%, 47%);
+  color:white;
+  padding: 0;
+  text-align:center;
+  vertical-align: middle;
+  width:180px;
+}
+
+#back{
+  margin-right: auto;
+}
+
+#bookmark{
+  background-color: beige;
+  color: black;
+  display:flex;
+  align-items: center;
+  text-align: center;
+  margin-left:auto;
+}
+
+.bookmark-icon{
+  justify-self: start;
+  margin-right:10px;
+}
+
+.tracker-container{
+  width:90%;
+}
+
+.tracker{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.number{
+  font-size: 28px;
+}
+
+.vertical-line{
+  display: inline-block;
+  border: lightgray solid 1px;
+}
+
+#pledge-total{
+  justify-self: flex-start;
+  margin-left: 5%;
+  margin-right:5%;
+}
+
+#backer-count{
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+#days-count{
+  justify-self: flex-end;
+  margin-right: auto;
+  margin-left: 5%;
+}
+
+progress{
+  -webkit-appearance: none;
+  appearance: none;
+  width:90%;
+  height:1.2em;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+progress::-webkit-progress-bar{
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+progress::-webkit-progress-value{
+  background:hsl(176, 50%, 47%);
+  border-radius: 20px;
+}
+
+.about{
+  padding:20px;
+}
+
+.product{
+  width:90%;
+  border: solid lightgray 1px;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 20px;
+  
+}
+
+.pledge{
+  color: hsl(176, 50%, 47%);
+  margin-left: auto;
+}
+
+.reward-btn{
+  margin-left: auto;
+  padding: 10px;
+}
+
+.modal-select{
+  display: none;
+}
+.modal-success{
+  display:none;
+}
