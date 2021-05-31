@@ -13,8 +13,7 @@ body{
 
 .bold-text{
   font-weight: 600;
-  color: black;
-  
+  color: black;  
 }
 
 p{
@@ -151,13 +150,15 @@ progress::-webkit-progress-value{
   padding:20px;
 }
 
-.product{
+.product, .no-reward, .product-modal, .back-project{
   width:90%;
-  border: solid lightgray 1px;
   margin-left:auto;
   margin-right: auto;
   padding: 20px;
-  
+}
+
+.product, .no-reward, .product-modal{
+  border: solid lightgray 1px;
 }
 
 .pledge{
@@ -170,9 +171,59 @@ progress::-webkit-progress-value{
   padding: 10px;
 }
 
-.modal-select{
-  display: none;
+/* modal stylings */
+
+.modal-bg{
+  margin:auto;
+  width:100%;
+  height: 100%;
+  top:0;
+  background-color: rgba(0,0,0,0.7);
+  position:fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+
 }
+
+.modal-container{
+  position: absolute;
+  top:40px;
+  height: 100%;
+}
+
+.modal-select{
+  padding: 5px;
+  position: relative;
+  background-color: white;
+  width:90%;
+  overflow-y: scroll;
+}
+
+.back-project{
+  padding:20px;
+}
+
+.product-modal, .no-reward{
+  padding:30px;
+  margin-bottom: 20px;
+}
+
+.pledge-modal{
+  color: hsl(176, 50%, 47%);
+  font-weight: 600;
+}
+
+.reward-count{
+  margin-left:auto;
+}
+
 .modal-success{
+  display:none;
+}
+
+.no-display{
   display:none;
 }
