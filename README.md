@@ -4,5 +4,8 @@ This is my solution to the crowdfunding product page challenge on frontend mento
 ## Progress
 Current version is just the basic layout of the webpage for dekstop. The next steps I'll be working on:
 - Creating the modal boxes
+    - Modal box for selecting - mostly done
+    - Success modal box
+    - Ability to close modal box    
 - Improving responsiveness
 - Creating mobile version
