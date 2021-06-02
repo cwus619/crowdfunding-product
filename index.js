@@ -7,12 +7,14 @@ function main(){
     const closeBox = document.querySelector(".close");
     const pledgeEntryBoxes = document.querySelectorAll(".pledge-entry")
     const formCheckInputs = document.querySelectorAll(".form-check-input")
-
+    const productForms = document.querySelectorAll(".pledge-form");
 
     outOfStock(products, modalProducts);
     bookmarkPage(bookmark);    
     modalBoxControl(backProjectBtns, closeBox);
-    radioForm(formCheckInputs, pledgeEntryBoxes);
+    radioForm(formCheckInputs, pledgeEntryBoxes, productForms);
+    // success();
+    closeSuccess()
 }
 
 
@@ -67,6 +69,7 @@ function modalBoxControl(backProjectBtns, close){
     for (let backBtn of backProjectBtns){
         backBtn.addEventListener("click", function(){
             document.querySelector(".modal-bg").style.display = "flex";
+            console.log("You clicked me!")
         })
     }
     close.addEventListener("click", function(){
@@ -75,23 +78,46 @@ function modalBoxControl(backProjectBtns, close){
 }
 
 // radio form check
-function radioForm(formCheckInputs, pledgeEntryBoxes){
+function radioForm(formCheckInputs, pledgeEntryBoxes, productForms){
     for (let check of formCheckInputs){
         const pledgeEntry = check.parentNode.parentNode.children[2];
         $(document).ready(function(){
             $(check).click(function(){
                 console.log(pledgeEntry)
                 if (check.checked){
-                    // loop over all pledgeEntryBoxes to close them
-                    for (let pledgeBox of pledgeEntryBoxes){
-                        pledgeBox.style.display = "none";
-                    }
+                    closePledges(pledgeEntryBoxes);
                     // display only selected pledgeEntry
                     pledgeEntry.style.display = "flex";
                 }
             })
         })          
     }
+    for (let form of productForms){
+        form.addEventListener("submit", function(e){
+            closePledges(pledgeEntryBoxes);
+            e.preventDefault();
+            success();
+        })
+    }
+}
+
+// loop over all pledgeEntryBoxes to close them
+function closePledges(pledgeEntryBoxes){
+    for (let pledgeBox of pledgeEntryBoxes){
+        pledgeBox.style.display = "none";
+    } 
+}
+
+// open success message once form submitted
+function success(){
+    document.querySelector(".modal-bg").style.display = "none";
+    document.querySelector(".success-bg").style.display = "flex";
+}
+
+function closeSuccess(){
+    document.querySelector(".got-it").addEventListener("click", function(){
+        document.querySelector(".success-bg").style.display = "none";
+    })
 }
 
 // call functions
