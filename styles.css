@@ -8,7 +8,8 @@
 
 body{
   font-family: 'Commissioner', sans-serif;
-  background-color: beige;
+  /* background-color: beige; */
+  background-color: hsl(136, 0%, 95%);
 }
 
 .bold-text{
@@ -78,7 +79,8 @@ p{
 }
 
 #bookmark{
-  background-color: beige;
+  /* background-color: beige; */
+  background-color: hsl(136, 0%, 95%);
   color: black;
   display:flex;
   align-items: center;
@@ -167,13 +169,13 @@ progress::-webkit-progress-value{
 }
 
 .reward-btn{
-  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
 
 /* modal stylings */
 
-.modal-bg{
+.modal-bg, .success-bg{
   margin:auto;
   width:100%;
   height: 100%;
@@ -247,13 +249,31 @@ progress::-webkit-progress-value{
   width:initial;
 }
 
-.pledge-btn:hover, .reward-btn:hover{
+.pledge-btn:hover, .reward-btn:hover, .got-it:hover{
   background-color: hsl(176, 72%, 28%);
   color: white;
 }
 
 .modal-success{
   display:none;
+  background-color: white;
+  position:absolute;
+  width:35%;
+  padding:35px;
+}
+
+.tick{
+  margin-bottom: 30px;
+
+}
+
+.got-it{
+  padding:10px;  
+}
+
+.success-text{
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .no-display{
