@@ -76,6 +76,7 @@ p{
 
 #back{
   margin-right: auto;
+  margin-left: 0;
 }
 
 #bookmark{
@@ -169,7 +170,7 @@ progress::-webkit-progress-value{
 }
 
 .reward-btn{
-  margin-right: auto;
+  margin-left: auto;
   padding: 10px;
 }
 
