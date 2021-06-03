@@ -56,18 +56,20 @@
   <div class="d-flex flex-column p-4 tracker-container">
     <div class="d-flex">
       <div class="tracker" id="pledge-total">
-        <span class="number bold-text">$89,914</span><p>of $100,000 backed</p>
+        <div>
+          <span class="number bold-text">$</span><span class="number bold-text" id="current">89,914</span><p>of $100,000 backed</p>
+        </div>
       </div>
       <span class="vertical-line"></span>
       <div class="tracker" id="backer-count">
-        <span class="number bold-text">5,007</span><p>total backers</p>
+        <span class="number bold-text" id="backers">5,007</span><p>total backers</p>
       </div>
         <span class="vertical-line"></span>
       <div class="tracker" id="days-count">
         <span class="number bold-text">56</span><p>days left</p>
       </div>
     </div>
-    <progress value="89914" max="100000"></progress>
+    <progress id="progress-bar" value="89914" max="100000"></progress>
   </div>
 
   <div class="the-project">
@@ -159,7 +161,7 @@
               <hr>
               <p>Enter your pledge</p>
               <form class="pledge-form">
-                <input class="rounded-pill pledge-amt" type="text" placeholder="$1">
+                <input class="rounded-pill pledge-amt" min="1" type="number" placeholder="$1">
                 <button class="btn pledge-btn rounded-pill">Continue</button>
               </form>
             </div>
@@ -184,7 +186,7 @@
               <hr>
               <p>Enter your pledge</p>
               <form class="pledge-form">
-                <input class="rounded-pill pledge-amt" type="text" placeholder="$25">
+                <input class="rounded-pill pledge-amt" min="25" type="number" placeholder="$25">
                 <button class="btn pledge-btn rounded-pill">Continue</button>
               </form>
             </div>
@@ -207,7 +209,7 @@
               <hr>
               <p>Enter your pledge</p>
               <form class="pledge-form">
-                <input class="rounded-pill pledge-amt" type="text" placeholder="$75">
+                <input class="rounded-pill pledge-amt" min="75" type="number" placeholder="$75">
                 <button class="btn pledge-btn rounded-pill">Continue</button>
               </form>
             </div>
@@ -230,7 +232,7 @@
               <hr>
               <p>Enter your pledge</p>
               <form class="pledge-form">
-                <input class="rounded-pill pledge-amt" type="text" placeholder="$200">
+                <input class="rounded-pill pledge-amt" min="200" type="number" placeholder="$200">
                 <button class="btn pledge-btn rounded-pill">Continue</button>
               </form>
             </div>
