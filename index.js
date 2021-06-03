@@ -5,18 +5,14 @@ function main(){
     const modalProducts = document.querySelectorAll(".product-modal");
     const backProjectBtns = document.querySelectorAll(".reward-btn");
     const closeBox = document.querySelector(".close");
-    const pledgeEntryBoxes = document.querySelectorAll(".pledge-entry")
-    const formCheckInputs = document.querySelectorAll(".form-check-input")
-    const productForms = document.querySelectorAll(".pledge-form");
-
+    
     outOfStock(products, modalProducts);
     bookmarkPage(bookmark);    
     modalBoxControl(backProjectBtns, closeBox);
-    radioForm(formCheckInputs, pledgeEntryBoxes, productForms);
+    // radioForm(formCheckInputs, pledgeEntryBoxes, productForms);
     // success();
     closeSuccess()
 }
-
 
 // dynamically grey out any sold out items
 function outOfStock(products, modalProducts){
@@ -70,6 +66,8 @@ function modalBoxControl(backProjectBtns, close){
         backBtn.addEventListener("click", function(){
             document.querySelector(".modal-bg").style.display = "flex";
             console.log("You clicked me!")
+            // radioForm(formCheckInputs, pledgeEntryBoxes, productForms)
+            radioForm()
         })
     }
     close.addEventListener("click", function(){
@@ -78,7 +76,10 @@ function modalBoxControl(backProjectBtns, close){
 }
 
 // radio form check
-function radioForm(formCheckInputs, pledgeEntryBoxes, productForms){
+function radioForm(){
+    const formCheckInputs = document.querySelectorAll(".form-check-input")
+    const productForms = document.querySelectorAll(".pledge-form");
+    const pledgeEntryBoxes = document.querySelectorAll(".pledge-entry");
     for (let check of formCheckInputs){
         const pledgeEntry = check.parentNode.parentNode.children[2];
         $(document).ready(function(){
@@ -96,6 +97,8 @@ function radioForm(formCheckInputs, pledgeEntryBoxes, productForms){
         form.addEventListener("submit", function(e){
             closePledges(pledgeEntryBoxes);
             e.preventDefault();
+            increaseBackers()
+            incrementCurrent(form);               
             success();
         })
     }
@@ -120,5 +123,39 @@ function closeSuccess(){
     })
 }
 
-// call functions
+function increaseBackers(){
+    // increment backers
+    let backers = document.querySelector("#backers");
+    let backerCount = backers.innerText
+    
+    // remove comma then increment - consider regex
+    backerCount = backerCount.split(",").join("");
+    backerCount++;
+
+    // reinsert comma
+    backerCount = backerCount.toLocaleString("en-US");
+    backers.innerHTML = backerCount;
+}
+
+function incrementCurrent(form){
+    // donation to add to tracker
+    let donation = parseInt(form.children[0].value);
+    
+    // get current donated amount and progress bar value
+    let current = document.querySelector("#current");
+    let progress = document.querySelector("#progress-bar")
+
+    // convert current to number and add donation 
+    let currentValue = parseInt(current.innerHTML.split(",").join(""));
+    currentValue += donation;
+
+    // update progress bar
+    progress.value = currentValue;
+
+    // change number format to locale and add back into document
+    currentValue = currentValue.toLocaleString();
+    current.innerHTML = currentValue;
+}
+
+
 main();
