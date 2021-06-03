@@ -7,7 +7,7 @@ Current version is just the basic layout of the webpage for dekstop. The next st
     - Modal box for selecting - complete
     - Success modal box - complete
     - Ability to close modal box - complete   
-- Update numbers dynamically as pledges made
+- Update numbers dynamically as pledges made - partially complete, require decrement for remaining count of products
 - Improving responsiveness
 - Creating mobile version
 
