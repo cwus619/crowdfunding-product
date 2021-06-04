@@ -1,7 +1,14 @@
 // main function
 function main(){
+    // makeshift "database"
+    let productCount = {
+        "Bamboo Stand":101,
+        "Black Edition Stand":64
+    }
+
+    // variables require by functiosn
     const bookmark = document.querySelector(".bookmark");
-    const products= document.querySelectorAll(".product");
+    const products = document.querySelectorAll(".product");
     const modalProducts = document.querySelectorAll(".product-modal");
     const backProjectBtns = document.querySelectorAll(".reward-btn");
     const closeBox = document.querySelector(".close");
@@ -9,9 +16,8 @@ function main(){
     outOfStock(products, modalProducts);
     bookmarkPage(bookmark);    
     modalBoxControl(backProjectBtns, closeBox);
-    // radioForm(formCheckInputs, pledgeEntryBoxes, productForms);
-    // success();
-    closeSuccess()
+    radioForm(productCount, products, modalProducts);
+    closeSuccess();
 }
 
 // dynamically grey out any sold out items
@@ -65,9 +71,6 @@ function modalBoxControl(backProjectBtns, close){
     for (let backBtn of backProjectBtns){
         backBtn.addEventListener("click", function(){
             document.querySelector(".modal-bg").style.display = "flex";
-            console.log("You clicked me!")
-            // radioForm(formCheckInputs, pledgeEntryBoxes, productForms)
-            radioForm()
         })
     }
     close.addEventListener("click", function(){
@@ -76,7 +79,7 @@ function modalBoxControl(backProjectBtns, close){
 }
 
 // radio form check
-function radioForm(){
+function radioForm(productCount, products, modalProducts){
     const formCheckInputs = document.querySelectorAll(".form-check-input")
     const productForms = document.querySelectorAll(".pledge-form");
     const pledgeEntryBoxes = document.querySelectorAll(".pledge-entry");
@@ -84,7 +87,6 @@ function radioForm(){
         const pledgeEntry = check.parentNode.parentNode.children[2];
         $(document).ready(function(){
             $(check).click(function(){
-                console.log(pledgeEntry)
                 if (check.checked){
                     closePledges(pledgeEntryBoxes);
                     // display only selected pledgeEntry
@@ -95,6 +97,21 @@ function radioForm(){
     }
     for (let form of productForms){
         form.addEventListener("submit", function(e){
+            // decrement remaining product count
+            if (form.id){
+                productCount[form.id] = productCount[form.id]-1;
+                for (let product of products){
+                    if (product.children[0].children[0]. innerHTML === form.id){
+                        product.children[2].children[0].children[0].innerText = productCount[form.id];
+                    }
+                }
+                for (let modalProduct of modalProducts){
+                    if (modalProduct.children[0].children[1].children[0].innerText === form.id){
+                        modalProduct.children[0].children[3].children[0].innerText = productCount[form.id];
+                    }
+                }
+
+            }
             closePledges(pledgeEntryBoxes);
             e.preventDefault();
             increaseBackers()
