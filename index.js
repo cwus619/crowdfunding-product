@@ -52,16 +52,20 @@ function bookmarkPage(bookmark){
         const bookmarkIcon = document.querySelector(".bookmark-icon") 
         const circle =  bookmarkIcon.children[0].children[0];
         const path = bookmarkIcon.children[0].children[1];
+        const bookmarkText = document.getElementById("bookmark-text")
         if (bookmark.style.color === ""){
             bookmark.style.color = "hsl(176, 50%, 47%)";
             
             circle.style.fill = "hsl(176, 50%, 47%)";
             path.style.fill = "#FFFFFF";
+
+            bookmarkText.innerText = "Bookmarked";
         } else{
             bookmark.style.color = "";
             
             circle.style.fill = "#2F2F2F";
             path.style.fill = "##B1B1B1"
+            bookmarkText.innerText = "Bookmark";
         }
     })
 }
@@ -173,6 +177,5 @@ function incrementCurrent(form){
     currentValue = currentValue.toLocaleString();
     current.innerHTML = currentValue;
 }
-
 
 main();
