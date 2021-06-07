@@ -2,14 +2,15 @@
   font-size: 11px; 
   text-align: center; 
 }
+
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
 
 body{
   font-family: 'Commissioner', sans-serif;
-  /* background-color: beige; */
   background-color: hsl(136, 0%, 95%);
+  position:relative;
 }
 
 .bold-text{
@@ -24,7 +25,7 @@ p{
 
 .nav-bg{
   position: absolute;
-  width:100%;
+  width: 100%;
 }
 
 .nav-bg img{
@@ -40,13 +41,22 @@ p{
 }
 
 .nav-options{
+  position:absolute;
+  right:40px;
   display:flex;
   justify-content: end;
-  margin-left:70%;
+}
+
+.mastercraft{
+  position: absolute;
+  left: 48%;
+  top:310px;
+  z-index: 2;
 }
 
 .container{
-  position: relative;
+  position: absolute;
+  left: 25%;
   z-index:1;
 }
 
@@ -58,7 +68,6 @@ p{
 
 .heading{
   margin-top: 280px;
-
 }
 
 .buttons{
@@ -80,7 +89,6 @@ p{
 }
 
 #bookmark{
-  /* background-color: beige; */
   background-color: hsl(136, 0%, 95%);
   color: black;
   display:flex;
@@ -164,6 +172,11 @@ progress::-webkit-progress-value{
   border: solid lightgray 1px;
 }
 
+.product-title, .reward-select{
+  display: flex;
+  align-items: center;
+}
+
 .pledge{
   color: hsl(176, 50%, 47%);
   margin-left: auto;
@@ -183,7 +196,7 @@ progress::-webkit-progress-value{
   top:0;
   background-color: rgba(0,0,0,0.7);
   position:fixed;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,7 +278,6 @@ progress::-webkit-progress-value{
 
 .tick{
   margin-bottom: 30px;
-
 }
 
 .got-it{
@@ -279,4 +291,83 @@ progress::-webkit-progress-value{
 
 .no-display{
   display:none;
+}
+
+@media screen and (max-width: 1325px){
+  .heading{
+    margin-top: 265px;
+  }
+  .mastercraft{
+    top:300px;
+  }
+}
+
+@media screen and (max-width: 1240px){
+  .heading{
+    margin-top: 245px;
+  }
+
+  .mastercraft{
+    top:280px;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .heading{
+    margin-top: 225px;
+  }
+
+  .mastercraft{
+    top:260px;
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  .heading{
+    margin-top: 200px;
+  }
+
+  .mastercraft{
+    top:235px;
+  }
+}
+
+@media screen and (max-width:990px) {
+  .trackers{
+    flex-direction: column;
+  }
+  .tracker, .tracker div, .tracker .number{
+    align-items: center;
+    text-align: center; 
+  }
+
+  #backer-count, #days-count, #days-count{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .vertical-line{
+    align-self: center;
+    width:50%;   
+  }
+
+  .product-title{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pledge{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .product-name, .reward-btn{
+    margin:0;
+  }
+
+  .reward-select{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
