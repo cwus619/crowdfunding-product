@@ -40,6 +40,10 @@
     </div>
   </div>
 
+  <div class="mastercraft">
+    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="28" cy="28" r="28"/><g fill-rule="nonzero"><path d="M15.565 28.565a1.93 1.93 0 012.606-.113l.122.113 10.142 10.142a1.93 1.93 0 01-2.606 2.84l-.122-.112-10.142-10.142a1.93 1.93 0 010-2.728z" fill="#444"/><path d="M36.19 17.48c1.006-.996 2.706-.34 2.805 1.026l.005.126v10.736c0 .9-.737 1.629-1.646 1.629a1.64 1.64 0 01-1.642-1.507l-.005-.122v-6.805l-8.043 7.957c-1.006.996-2.707.34-2.806-1.026l-.004-.126v-6.805L16.81 30.52a1.66 1.66 0 01-2.224.095l-.105-.095a1.616 1.616 0 01-.096-2.2l.096-.103L25.336 17.48c1.006-.996 2.707-.34 2.806 1.026l.004.126v6.804l8.043-7.956z" fill="#FFF"/></g></g></svg>
+  </div>
+
   <div class="container d-flex flex-column align-items-center justify-content-between w-50">
   <div class="heading p-5 d-flex flex-column align-items-center">    
     <h3 class="bold-text">Mastercraft Bamboo Monitor Riser</h3>
@@ -47,14 +51,13 @@
     <div class="d-flex buttons w-100">
       <button class="btn rounded-pill reward-btn" id="back">Back this project</button>  
       <button class="btn rounded-pill bookmark bold-text " id="bookmark">
-        <!-- <img class="bookmark-icon" id="bookmark-icon" src="./images/icon-bookmark.svg" alt="bookmark">Bookmark -->
-        <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>Bookmark
+        <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg><span id="bookmark-text">Bookmark</span>
       </button>  
    </div>
   </div>
 
   <div class="d-flex flex-column p-4 tracker-container">
-    <div class="d-flex">
+    <div class="d-flex trackers">
       <div class="tracker" id="pledge-total">
         <div>
           <span class="number bold-text">$</span><span class="number bold-text" id="current">89,914</span><p>of $100,000 backed</p>
@@ -85,37 +88,37 @@
     </div>
 
     <div class="product">
-      <div class="d-flex align-items-center">
-        <h5 class="bold-text mt-2 mb-4">Bamboo Stand</h5>
+      <div class="product-title">
+        <h5 class="bold-text mt-2 mb-4 mb-sm-2 product-name">Bamboo Stand</h5>
         <div class="pledge">Pledge $25 or more</div>
       </div>
       <div>
         <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
         you’ll be added to a special Backer member list.</p>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="reward-select">
         <p class="d-flex align-items-center"><span class="number bold-text reward-count">101</span> left</p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
       </div>
     </div>
   
     <div class="product">
-      <div class="d-flex align-items-center">
-        <h5 class="bold-text mt-2 mb-4 product-name">Black Edition Stand</h5>
+      <div class="product-title">
+        <h5 class="bold-text mt-2 mb-4 mb-sm-2 product-name">Black Edition Stand</h5>
         <div class="pledge">Pledge $75 or more</div>
       </div>
       <div>
         <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
         member list. Shipping is included.</p>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="reward-select">
         <p class="d-flex align-items-center"><span class="number bold-text reward-count">64</span> left</p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
       </div>
     </div>
  
     <div class="product">
-      <div class="d-flex align-items-center">
+      <div class="product-title">
         <h5 class="bold-text mt-2 mb-4 product-name">Mahogany Special Edition</h5>
         <div class="pledge">Pledge $200 or more</div>
       </div>
@@ -123,7 +126,7 @@
         <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
         to our Backer member list. Shipping is included.</p>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="reward-select">
         <p class="d-flex align-items-center"><span class="number bold-text reward-count">0</span> left</p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
         <!-- <button class="btn reward-btn rounded-pill">Out of Stock</button> -->
