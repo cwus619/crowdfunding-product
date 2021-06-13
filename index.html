@@ -46,12 +46,13 @@
 
   <div class="container d-flex flex-column align-items-center justify-content-between w-50">
   <div class="heading p-5 d-flex flex-column align-items-center">    
-    <h3 class="bold-text">Mastercraft Bamboo Monitor Riser</h3>
+    <h3 class="bold-text centred">Mastercraft Bamboo Monitor Riser</h3>
     <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
     <div class="d-flex buttons w-100">
       <button class="btn rounded-pill reward-btn" id="back">Back this project</button>  
-      <button class="btn rounded-pill bookmark bold-text " id="bookmark">
-        <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg><span id="bookmark-text">Bookmark</span>
+      <button class="btn rounded-pill bookmark bold-text" id="bookmark">
+        <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+        <span id="bookmark-text">Bookmark</span>
       </button>  
    </div>
   </div>
@@ -119,7 +120,7 @@
  
     <div class="product">
       <div class="product-title">
-        <h5 class="bold-text mt-2 mb-4 product-name">Mahogany Special Edition</h5>
+        <h5 class="bold-text mt-2 mb-4 mb-sm-2 product-name">Mahogany Special Edition</h5>
         <div class="pledge">Pledge $200 or more</div>
       </div>
       <div>
@@ -149,13 +150,15 @@
 
         <div class="form-check">    
           <div class="no-reward">   
-            <div class="d-flex justify-content-baseline">
+            <!-- <div class="d-flex justify-content-baseline"> -->
               <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
-              <label class="form-check-label">
-                <h5 class="bold-text ms-2">Pledge with no reward</h5>
-              </label>
+              <div class="product-modal-title">
+                <label class="form-check-label">
+                  <h5 class="bold-text">Pledge with no reward</h5>
+                </label>
+              <!-- </div> -->
             </div>
-            <div>
+            <div class="modal-desc">
               <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
               you will be signed up to receive product updates via email.</p>
             </div>
@@ -171,20 +174,20 @@
           </div>
 
           <div class="product-modal">
-            <div class="d-flex align-items-baseline">
+            
               <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
-              <label class="form-check-label">
-                <h5 class="bold-text ms-2 mt-2 mb-4">Bamboo Stand</h5>
-              </label>
-              
-              <div class="pledge-modal ms-2">Pledge $25 or more</div>
-              <p class="d-flex align-items-center reward-count"><span class="number bold-text">101</span> left</p>
-            </div>
+              <div class="product-modal-title">
+                <label class="form-check-label">
+                  <h5 class="bold-text">Bamboo Stand</h5>
+                </label>
+                <div class="pledge-modal">Pledge $25 or more</div>
+              </div>
           
-            <div>
+            <div class="modal-desc">
               <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
               you’ll be added to a special Backer member list.</p>
             </div>
+            <p class="d-flex align-items-center modal-reward-count"><span class="number bold-text">101</span> left</p>
             <div class="pledge-entry">
               <hr>
               <p>Enter your pledge</p>
@@ -196,18 +199,19 @@
           </div>
 
           <div class="product-modal">
-            <div class="d-flex align-items-baseline">
+            
               <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
-              <label class="form-check-label">
-                <h5 class="bold-text mt-2 mb-4 ms-2">Black Edition Stand</h5>
-              </label>
-              <div class="pledge-modal ms-2">Pledge $75 or more</div>
-              <p class="d-flex align-items-center reward-count"><span class="number bold-text">64</span> left</p>
-            </div>
-            <div>
+              <div class="product-modal-title">
+                <label class="form-check-label">
+                  <h5 class="bold-text">Black Edition Stand</h5>
+                </label>
+                <div class="pledge-modal">Pledge $75 or more</div>  
+              </div>
+            <div class="modal-desc">
               <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
               member list. Shipping is included.</p>
             </div>
+            <p class="d-flex align-items-center modal-reward-count"><span class="number bold-text">64</span> left</p>
             <div class="pledge-entry">
               <hr>
               <p>Enter your pledge</p>
@@ -219,18 +223,21 @@
           </div>
 
           <div class="product-modal">
+            
             <div class="d-flex align-items-baseline">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
-              <label class="form-check-label"> 
-                <h5 class="bold-text mt-2 mb-4 ms-2">Mahogany Special Edition</h5>
-              </label>
-              <div class="pledge-modal ms-2">Pledge $200 or more</div>
-              <p class="d-flex align-items-center reward-count"><span class="number bold-text">0</span> left</p>
+              <div class="product-modal-title">
+                <label class="form-check-label"> 
+                  <h5 class="bold-text">Mahogany Special Edition</h5>
+                </label>
+                <div class="pledge-modal">Pledge $200 or more</div>
+              </div>
             </div>
-            <div>
+            <div class="modal-desc">
               <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
               to our Backer member list. Shipping is included.</p>
             </div>
+            <p class="d-flex align-items-center modal-reward-count"><span class="number bold-text">0</span> left</p>
             <div class="pledge-entry">
               <hr>
               <p>Enter your pledge</p>
@@ -251,7 +258,7 @@
     <div class="tick">
       <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#3CB3AB" cx="32" cy="32" r="32"/><path stroke="#FFF" stroke-width="5" d="M20 31.86L28.093 40 44 24"/></g></svg>
     </div>
-    <h3 class="bold-text">Thanks for your support!</h3>
+    <h3 class="bold-text centred">Thanks for your support!</h3>
     <p class="success-text p-4">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
     an email once our campaign is completed.</p>
     <button class="btn rounded-pill got-it">Got it!</button>
