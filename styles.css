@@ -18,6 +18,10 @@ body{
   color: black;  
 }
 
+h3{
+  text-align: center;
+}
+
 p{
   color: hsl(0, 0%, 48%);
   line-height: 30px;
@@ -201,8 +205,8 @@ progress::-webkit-progress-value{
   justify-content: center;
   align-items: center;
   display:none;
-
 }
+
 
 .modal-container{
   position: absolute;
@@ -230,24 +234,54 @@ progress::-webkit-progress-value{
 .product-modal, .no-reward{
   padding:30px;
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+/* Under test */
+
+/* .modal-bg{
+  display:flex;
+} */
+
 
 .pledge-modal{
   color: hsl(176, 50%, 47%);
   font-weight: 600;
+  margin-left: 10px;
 }
 
-.reward-count{
+.product-modal-title{
+  margin-left:10px;
+  display:flex;
+  align-items: baseline;
+  order:1;
+}
+
+.reward-count, .modal-reward-count{
   margin-left:auto;
+}
+
+.modal-reward-count{
+  margin-left:auto;
+  order:2;
+}
+
+.modal-desc{
+  order:3;
 }
 
 .pledge-form{
   margin-left: auto;
 }
 
+/* testing up to here */
+
 .pledge-entry{
   display: none;
+  width: 100%;
   align-items: center;
+  order: 4;
 }
 
 .pledge-amt{
@@ -310,6 +344,15 @@ progress::-webkit-progress-value{
   .mastercraft{
     top:280px;
   }
+
+  .modal-desc{
+    order:2;
+  }
+
+  .modal-reward-count{
+    order:3;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 1150px){
@@ -333,7 +376,27 @@ progress::-webkit-progress-value{
   }
 }
 
+@media screen and (max-width:1035px) {
+  .product-modal-title{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .pledge-modal{
+    margin-left: 0;
+  }
+  
+}
+
 @media screen and (max-width:990px) {
+  .mastercraft{
+    left:47%;
+  }
+
+  .container{
+    min-width:98%;
+    left: 2%;
+  }
+  
   .trackers{
     flex-direction: column;
   }
@@ -370,4 +433,37 @@ progress::-webkit-progress-value{
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .reward-count{
+    order: 5;
+  }
+
+  .pledge-entry{
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .pledge-form{
+    margin-left: 0;
+    display: flex;
+    width: 100%;
+  }
+
+  .pledge-btn, .pledge-amt{
+    width: 50%;   
+  }
+
+  .modal-success{
+    width:80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bookmark-icon{
+    display: flex;
+  }
+  #bookmark{
+    background-color: inherit;
+    border: hidden;
+  }   
 }
