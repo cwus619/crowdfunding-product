@@ -7,7 +7,7 @@ function main(){
     }
 
     // variables require by functiosn
-    const bookmark = document.querySelector(".bookmark");
+    const bookmark = document.querySelector("#bookmark");
     const products = document.querySelectorAll(".product");
     const modalProducts = document.querySelectorAll(".product-modal");
     const backProjectBtns = document.querySelectorAll(".reward-btn");
@@ -37,7 +37,7 @@ function outOfStock(products, modalProducts){
     }
     
     for (let mProduct of modalProducts){
-        const mRemainder = mProduct.children[0].children[3].children[0];
+        const mRemainder = mProduct.children[2].children[0];
         if (mRemainder.innerHTML === "0"){
             const radioBtn = mProduct.children[0].children[0];
             mProduct.style.opacity = "0.4";
@@ -88,7 +88,12 @@ function radioForm(productCount, products, modalProducts){
     const productForms = document.querySelectorAll(".pledge-form");
     const pledgeEntryBoxes = document.querySelectorAll(".pledge-entry");
     for (let check of formCheckInputs){
-        const pledgeEntry = check.parentNode.parentNode.children[2];
+        // Stored children of check in array
+        const childElements = check.parentNode.children 
+        
+        // take final child element of check which is pledge-entry 
+        const pledgeEntry = check.parentNode.children[childElements.length-1];
+        
         $(document).ready(function(){
             $(check).click(function(){
                 if (check.checked){
@@ -105,13 +110,13 @@ function radioForm(productCount, products, modalProducts){
             if (form.id){
                 productCount[form.id] = productCount[form.id]-1;
                 for (let product of products){
-                    if (product.children[0].children[0]. innerHTML === form.id){
+                    if (product.children[0].children[0].innerHTML === form.id){
                         product.children[2].children[0].children[0].innerText = productCount[form.id];
                     }
                 }
                 for (let modalProduct of modalProducts){
                     if (modalProduct.children[0].children[1].children[0].innerText === form.id){
-                        modalProduct.children[0].children[3].children[0].innerText = productCount[form.id];
+                        modalProduct.children[2].children[0].innerText = productCount[form.id];
                     }
                 }
 
@@ -177,5 +182,6 @@ function incrementCurrent(form){
     currentValue = currentValue.toLocaleString();
     current.innerHTML = currentValue;
 }
+
 
 main();
