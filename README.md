@@ -8,11 +8,11 @@ Current version is just the basic layout of the webpage for dekstop. The next st
     - Success modal box - complete
     - Ability to close modal box - complete   
 - Update numbers dynamically as pledges made - complete
-- Improving responsiveness - Complete for desktop, WIP for mobile
+- Improving responsiveness - Complete
 - Creating mobile version - work in progress
     - Modal boxes - complete
     - Navbar
-    - Bookmark button   
+    - Bookmark button - complete  
 - Logo at top of page - completed
 
 ## Timeline of Changes (from 13th June onwards)
