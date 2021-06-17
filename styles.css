@@ -29,11 +29,17 @@ p{
 
 .nav-bg{
   position: absolute;
-  width: 100%;
+  min-width: 100%;
+  display: flex; 
 }
 
-.nav-bg img{
+.nav-img{
   width:100%;
+  flex-shrink: 0;
+}
+
+.bg-img{
+  flex: 0;
 }
 
 .logo{
@@ -92,6 +98,13 @@ p{
   margin-left: 0;
 }
 
+#back-small{
+  margin-right: auto;
+  margin-left: 0;
+  width:150px;
+  display: none;
+}
+
 #bookmark{
   background-color: hsl(136, 0%, 95%);
   color: black;
@@ -99,6 +112,17 @@ p{
   align-items: center;
   text-align: center;
   margin-left:auto;
+}
+
+.btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.bookmark-mobile{
+  display:none;
+  width: max-content;
+  background: none;
 }
 
 .bookmark-icon{
@@ -400,11 +424,16 @@ progress::-webkit-progress-value{
   .trackers{
     flex-direction: column;
   }
+
   .tracker, .tracker div, .tracker .number{
     align-items: center;
     text-align: center; 
   }
 
+  .buttons{
+    margin-top: 0;
+  }
+  
   #backer-count, #days-count, #days-count{
     margin-right: 0;
     margin-left: 0;
@@ -458,12 +487,67 @@ progress::-webkit-progress-value{
   }
 }
 
-@media screen and (max-width: 550px) {
-  .bookmark-icon{
-    display: flex;
-  }
+@media screen and (max-width: 550px) {  
   #bookmark{
-    background-color: inherit;
-    border: hidden;
-  }   
+    display: none;
+  }
+
+  .bookmark-mobile{
+    display:initial;
+  }
+
+  .heading{
+    margin-top: 75px;
+    
+  }  
+
+  .mastercraft{
+    top:105px;
+    left:47%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .heading{
+    margin-top: 45px;
+  }  
+
+  .mastercraft{
+    top:75px;
+    left:45%;
+  }
+}
+
+@media screen and (max-width: 405px) { 
+  h5{
+    font-size: 1rem;
+  }
+
+  .heading{
+    margin-top: 25px;
+  }  
+
+  .mastercraft{
+    top:55px;
+    left:45%;
+  }
+
+  #back{
+    display: none;
+  }
+
+  #back-small{
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 325px) { 
+  .heading{
+    margin-top: 15px;
+  }  
+
+  .mastercraft{
+    top:45px;
+    left:44%;
+  }
 }
