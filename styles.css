@@ -38,10 +38,6 @@ p{
   flex-shrink: 0;
 }
 
-.bg-img{
-  flex: 0;
-}
-
 .logo{
   color:white;
 }
@@ -93,14 +89,12 @@ p{
   width:180px;
 }
 
-#back{
+#back, #back-small{
   margin-right: auto;
   margin-left: 0;
 }
 
 #back-small{
-  margin-right: auto;
-  margin-left: 0;
   width:150px;
   display: none;
 }
