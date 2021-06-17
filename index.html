@@ -14,7 +14,9 @@
 </head>
 <body>
   <div class="nav-bg">
-    <img src="./images/image-hero-desktop.jpg">
+    <!-- <div class="bg-img"> -->
+      <img class="nav-img" src="./images/image-hero-desktop.jpg">
+    <!-- </div> -->
   </div>
   <div class="navbar navbar-expand-md">
     <div class="container-fluid">
@@ -49,11 +51,17 @@
     <h3 class="bold-text centred">Mastercraft Bamboo Monitor Riser</h3>
     <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
     <div class="d-flex buttons w-100">
-      <button class="btn rounded-pill reward-btn" id="back">Back this project</button>  
+      <button class="btn rounded-pill reward-btn" id="back">Back this project</button>
+      <button class="btn rounded-pill reward-btn" id="back-small">Back</button>  
+      <!-- Desktop bookmark button -->
       <button class="btn rounded-pill bookmark bold-text" id="bookmark">
         <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
         <span id="bookmark-text">Bookmark</span>
       </button>  
+      <!-- Mobile bookmark -->
+      <button class="btn bookmark-mobile" id="bookmark-mobile">
+        <svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+      </button>
    </div>
   </div>
 
@@ -150,13 +158,11 @@
 
         <div class="form-check">    
           <div class="no-reward">   
-            <!-- <div class="d-flex justify-content-baseline"> -->
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
-              <div class="product-modal-title">
-                <label class="form-check-label">
-                  <h5 class="bold-text">Pledge with no reward</h5>
-                </label>
-              <!-- </div> -->
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
+            <div class="product-modal-title">
+              <label class="form-check-label">
+                <h5 class="bold-text">Pledge with no reward</h5>
+              </label>
             </div>
             <div class="modal-desc">
               <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
