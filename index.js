@@ -8,13 +8,15 @@ function main(){
 
     // variables require by functiosn
     const bookmark = document.querySelector("#bookmark");
+    const mobBookmark = document.querySelector("#bookmark-mobile")
     const products = document.querySelectorAll(".product");
     const modalProducts = document.querySelectorAll(".product-modal");
     const backProjectBtns = document.querySelectorAll(".reward-btn");
     const closeBox = document.querySelector(".close");
     
+
     outOfStock(products, modalProducts);
-    bookmarkPage(bookmark);    
+    bookmarkPage(bookmark, mobBookmark);    
     modalBoxControl(backProjectBtns, closeBox);
     radioForm(productCount, products, modalProducts);
     closeSuccess();
@@ -47,27 +49,40 @@ function outOfStock(products, modalProducts){
 }
 
 // change color of bookmark button to indicate bookmarked
-function bookmarkPage(bookmark){
+function bookmarkPage(bookmark, mobBookmark){
     bookmark.addEventListener("click", function(){
-        const bookmarkIcon = document.querySelector(".bookmark-icon") 
-        const circle =  bookmarkIcon.children[0].children[0];
-        const path = bookmarkIcon.children[0].children[1];
-        const bookmarkText = document.getElementById("bookmark-text")
-        if (bookmark.style.color === ""){
-            bookmark.style.color = "hsl(176, 50%, 47%)";
-            
-            circle.style.fill = "hsl(176, 50%, 47%)";
-            path.style.fill = "#FFFFFF";
-
-            bookmarkText.innerText = "Bookmarked";
-        } else{
-            bookmark.style.color = "";
-            
-            circle.style.fill = "#2F2F2F";
-            path.style.fill = "##B1B1B1"
-            bookmarkText.innerText = "Bookmark";
-        }
+        showBookmarked(bookmark, mobBookmark);
     })
+    mobBookmark.addEventListener("click", function(){
+        showBookmarked(bookmark, mobBookmark);
+    })
+}
+
+function showBookmarked(bookmark, mobBookmark){
+    const bookmarkIcon = document.querySelectorAll(".bookmark-icon") 
+    const circle =  bookmarkIcon[0].children[0].children[0];
+    const mobCircle = bookmarkIcon[1].children[0].children[0];
+    const path = bookmarkIcon[0].children[0].children[1];
+    const mobPath = bookmarkIcon[1].children[0].children[1];
+    const bookmarkText = document.getElementById("bookmark-text")
+    if (bookmark.style.color === ""){
+        bookmark.style.color = "hsl(176, 50%, 47%)";
+
+        circle.style.fill = "hsl(176, 50%, 47%)";
+        mobCircle.style.fill = "hsl(176, 50%, 47%)";
+        path.style.fill = "#FFFFFF";
+        mobPath.style.fill = "#FFFFFF";
+
+        bookmarkText.innerText = "Bookmarked";
+    } else{
+        bookmark.style.color = "";
+        
+        circle.style.fill = "#2F2F2F";
+        mobCircle.style.fill = "#2F2F2F";
+        path.style.fill = "#B1B1B1"
+        mobPath.style.fill = "#B1B1B1";
+        bookmarkText.innerText = "Bookmark";
+    }
 }
 
 // modal box control
@@ -182,6 +197,5 @@ function incrementCurrent(form){
     currentValue = currentValue.toLocaleString();
     current.innerHTML = currentValue;
 }
-
 
 main();
