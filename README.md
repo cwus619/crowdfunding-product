@@ -12,8 +12,12 @@ Current version is just the basic layout of the webpage for dekstop. The next st
 - Creating mobile version - work in progress
     - Modal boxes - complete
     - Navbar - complete
-    - Bookmark button - complete  
+    - Bookmark button - complete 
 - Logo at top of page - complete
+
+### Further Details To Work On
+- Position of Mastercraft logo in mobile version
+- Mobile version - left appears before number remaining
 
 
 ## Link
