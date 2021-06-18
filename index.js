@@ -198,4 +198,16 @@ function incrementCurrent(form){
     current.innerHTML = currentValue;
 }
 
+const hamburger = document.querySelector(".hamburger");
+const closeMenu = document.querySelector(".close-menu");
+hamburger.addEventListener("click", function(){
+    console.log("HAMBURGER CLICKED!");
+    document.querySelector(".menu-bg").style.display="flex";
+    // hamburger.style.display="none";
+})
+closeMenu.addEventListener("click", function(){
+    document.querySelector(".menu-bg").style.display="none";
+    // hamburger.style.display="initial";
+})
+
 main();
