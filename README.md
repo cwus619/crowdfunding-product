@@ -8,15 +8,13 @@ Current version is just the basic layout of the webpage for dekstop. The next st
     - Success modal box - complete
     - Ability to close modal box - complete   
 - Update numbers dynamically as pledges made - complete
-- Improving responsiveness - Complete
+- Improving responsiveness - Work in progress between screen width 600px-900px
 - Creating mobile version - work in progress
     - Modal boxes - complete
-    - Navbar
+    - Navbar - complete
     - Bookmark button - complete  
-- Logo at top of page - completed
+- Logo at top of page - complete
 
-## Timeline of Changes (from 13th June onwards)
-13.6.2021 - Changes made to structure of HTML, additional divs and classes created, JS amended to accommodate changes made to HTML structure.
 
 ## Link
 - Current Live Site: [Go To Page](https://cwus619.github.io/crowdfunding-product/)
