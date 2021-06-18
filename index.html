@@ -16,6 +16,7 @@
   <div class="nav-bg">
     <!-- <div class="bg-img"> -->
       <img class="nav-img" src="./images/image-hero-desktop.jpg">
+      <img class="nav-img-mob" src="./images/image-hero-mobile.jpg">
     <!-- </div> -->
   </div>
   <div class="navbar navbar-expand-md">
@@ -23,9 +24,18 @@
       <a class="navbar-brand">
         <img class="logo" src="./images/logo.svg" alt="logo"> 
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+      </button> -->
+      
+      <button class="hamburger">
+        <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#FFF" fill-rule="evenodd">
+            <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z"/>
+          </g>
+        </svg>
       </button>
+      
       <div class="collapse navbar-collapse nav-options" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -256,9 +266,10 @@
         </div>
       </div>
     </div>
-    <!-- Success modal end -->
+    
   </div>
 </div>
+<!-- Success, appears when donation submitted -->
 <div class="success-bg">
   <div class="modal-success d-flex flex-column align-items-center">
     <div class="tick">
@@ -269,6 +280,23 @@
     an email once our campaign is completed.</p>
     <button class="btn rounded-pill got-it">Got it!</button>
   </div>
+</div>
+<!-- Menu for mobile version -->
+<div class="menu-bg">
+  <!-- <div class="d-flex flex-column"> -->
+  <div class="close-menu">
+    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+  </div>
+  <div class="menu-container">
+    <div class="menu">
+      <a class="menu-item bold-text">About</a>
+      <hr>
+      <a class="menu-item bold-text">Discover</a>
+      <hr>
+      <a class="menu-item bold-text">Get Started</a>
+    </div>
+  </div>
+  <!-- </div> -->
 </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
