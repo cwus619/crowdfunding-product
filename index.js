@@ -121,6 +121,7 @@ function radioForm(productCount, products, modalProducts){
     }
     for (let form of productForms){
         form.addEventListener("submit", function(e){
+            
             // decrement remaining product count
             if (form.id){
                 productCount[form.id] = productCount[form.id]-1;
@@ -130,17 +131,19 @@ function radioForm(productCount, products, modalProducts){
                     }
                 }
                 for (let modalProduct of modalProducts){
-                    if (modalProduct.children[0].children[1].children[0].innerText === form.id){
-                        modalProduct.children[2].children[0].innerText = productCount[form.id];
+                    // console.log(modalProduct.children[3].children[0].innerText)
+                    if (modalProduct.children[1].children[0].children[0].innerText === form.id){
+                        modalProduct.children[3].children[0].innerText = productCount[form.id];
+                        console.log(productCount[form.id]);
                     }
                 }
-
             }
-            closePledges(pledgeEntryBoxes);
             e.preventDefault();
+            closePledges(pledgeEntryBoxes);
+            success();
             increaseBackers()
             incrementCurrent(form);               
-            success();
+            // success();
         })
     }
 }
@@ -198,6 +201,7 @@ function incrementCurrent(form){
     current.innerHTML = currentValue;
 }
 
+// Put into a function
 const hamburger = document.querySelector(".hamburger");
 const closeMenu = document.querySelector(".close-menu");
 hamburger.addEventListener("click", function(){
