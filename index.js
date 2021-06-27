@@ -1,3 +1,7 @@
+const mastercraft = document.querySelector(".mastercraft") 
+console.log(mastercraft.style)
+
+
 // main function
 function main(){
     // makeshift "database"
