@@ -14,20 +14,14 @@
 </head>
 <body>
   <div class="nav-bg">
-    <!-- <div class="bg-img"> -->
       <img class="nav-img" src="./images/image-hero-desktop.jpg">
       <img class="nav-img-mob" src="./images/image-hero-mobile.jpg">
-    <!-- </div> -->
   </div>
   <div class="navbar navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand">
         <img class="logo" src="./images/logo.svg" alt="logo"> 
       </a>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      
       <button class="hamburger">
         <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
           <g fill="#FFF" fill-rule="evenodd">
@@ -52,9 +46,9 @@
     </div>
   </div>
 
-  <div class="mastercraft">
-    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="28" cy="28" r="28"/><g fill-rule="nonzero"><path d="M15.565 28.565a1.93 1.93 0 012.606-.113l.122.113 10.142 10.142a1.93 1.93 0 01-2.606 2.84l-.122-.112-10.142-10.142a1.93 1.93 0 010-2.728z" fill="#444"/><path d="M36.19 17.48c1.006-.996 2.706-.34 2.805 1.026l.005.126v10.736c0 .9-.737 1.629-1.646 1.629a1.64 1.64 0 01-1.642-1.507l-.005-.122v-6.805l-8.043 7.957c-1.006.996-2.707.34-2.806-1.026l-.004-.126v-6.805L16.81 30.52a1.66 1.66 0 01-2.224.095l-.105-.095a1.616 1.616 0 01-.096-2.2l.096-.103L25.336 17.48c1.006-.996 2.707-.34 2.806 1.026l.004.126v6.804l8.043-7.956z" fill="#FFF"/></g></g></svg>
-  </div>
+  <!-- <div class="mastercraft"> -->
+    <svg class="mastercraft" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="28" cy="28" r="28"/><g fill-rule="nonzero"><path d="M15.565 28.565a1.93 1.93 0 012.606-.113l.122.113 10.142 10.142a1.93 1.93 0 01-2.606 2.84l-.122-.112-10.142-10.142a1.93 1.93 0 010-2.728z" fill="#444"/><path d="M36.19 17.48c1.006-.996 2.706-.34 2.805 1.026l.005.126v10.736c0 .9-.737 1.629-1.646 1.629a1.64 1.64 0 01-1.642-1.507l-.005-.122v-6.805l-8.043 7.957c-1.006.996-2.707.34-2.806-1.026l-.004-.126v-6.805L16.81 30.52a1.66 1.66 0 01-2.224.095l-.105-.095a1.616 1.616 0 01-.096-2.2l.096-.103L25.336 17.48c1.006-.996 2.707-.34 2.806 1.026l.004.126v6.804l8.043-7.956z" fill="#FFF"/></g></g></svg>
+  <!-- </div> -->
 
   <div class="container d-flex flex-column align-items-center justify-content-between w-50">
   <div class="heading p-5 d-flex flex-column align-items-center">    
@@ -116,7 +110,7 @@
         you’ll be added to a special Backer member list.</p>
       </div>
       <div class="reward-select">
-        <p class="d-flex align-items-center"><span class="number bold-text reward-count">101</span> left</p>
+        <p class="d-flex align-items-center"><span class="number bold-text reward-count">101</span><span class="remaining-text">left</span></p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
       </div>
     </div>
@@ -131,7 +125,7 @@
         member list. Shipping is included.</p>
       </div>
       <div class="reward-select">
-        <p class="d-flex align-items-center"><span class="number bold-text reward-count">64</span> left</p>
+        <p class="d-flex align-items-center"><span class="number bold-text reward-count">64</span> <span class="remaining-text">left</span></p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
       </div>
     </div>
@@ -146,7 +140,7 @@
         to our Backer member list. Shipping is included.</p>
       </div>
       <div class="reward-select">
-        <p class="d-flex align-items-center"><span class="number bold-text reward-count">0</span> left</p>
+        <p class="d-flex align-items-center"><span class="number bold-text reward-count">0</span> <span class="remaining-text">left</span></p>
         <button class="btn reward-btn rounded-pill">Select Reward</button>
         <!-- <button class="btn reward-btn rounded-pill">Out of Stock</button> -->
       </div>
@@ -240,7 +234,7 @@
 
           <div class="product-modal">
             
-            <div class="d-flex align-items-baseline">
+
               <input class="form-check-input" type="radio" name="flexRadioDefault" id ="flexRadioDefault1">
               <div class="product-modal-title">
                 <label class="form-check-label"> 
@@ -248,7 +242,7 @@
                 </label>
                 <div class="pledge-modal">Pledge $200 or more</div>
               </div>
-            </div>
+            
             <div class="modal-desc">
               <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
               to our Backer member list. Shipping is included.</p>
