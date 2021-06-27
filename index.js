@@ -1,5 +1,7 @@
-const mastercraft = document.querySelector(".mastercraft") 
-console.log(mastercraft.style)
+const navBg = document.querySelector(".nav-bg")
+const navImg = document.querySelector(".nav-img")
+
+console.log(navBg.style.width)
 
 
 // main function
