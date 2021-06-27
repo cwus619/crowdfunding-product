@@ -1,7 +1,7 @@
 const navBg = document.querySelector(".nav-bg")
 const navImg = document.querySelector(".nav-img")
 
-console.log(navBg.style.width)
+console.log(navBg.style.offsetWidth)
 
 
 // main function
