@@ -1,9 +1,9 @@
-.attribution { 
+.attribution{ 
   font-size: 11px; 
   text-align: center; 
 }
 
-.attribution a { 
+.attribution a{ 
   color: hsl(228, 45%, 44%); 
 }
 
@@ -42,10 +42,6 @@ p{
   display: none;
 }
 
-.bg-img{
-  flex: 0;
-}
-
 .logo{
   color:white;
 }
@@ -63,7 +59,8 @@ p{
 
 .mastercraft{
   position: absolute;
-  left: 48%;
+  left: 50%;
+  margin-left: -28px;
   top:310px;
   z-index: 2;
 }
@@ -77,8 +74,6 @@ p{
 .hamburger{
   background: none;
   border: hidden;
-  /* height:2rem;
-  width: 2rem; */
   display: none;
 }
 
@@ -274,13 +269,6 @@ progress::-webkit-progress-value{
   flex-wrap: wrap;
 }
 
-/* Under test */
-
-/* .modal-bg{
-  display:flex;
-} */
-
-
 .pledge-modal{
   color: hsl(176, 50%, 47%);
   font-weight: 600;
@@ -310,8 +298,6 @@ progress::-webkit-progress-value{
 .pledge-form{
   margin-left: auto;
 }
-
-/* testing up to here */
 
 .pledge-entry{
   display: none;
@@ -363,23 +349,16 @@ progress::-webkit-progress-value{
   display:none;
 }
 
-@media screen and (max-width: 1325px){
-  .heading{
-    margin-top: 265px;
-  }
+/* @media screen and (max-width: 1325px){
   .mastercraft{
     top:300px;
   }
-}
+} */
 
 @media screen and (max-width: 1240px){
-  .heading{
-    margin-top: 245px;
-  }
-
-  .mastercraft{
+  /* .mastercraft{
     top:280px;
-  }
+  } */
 
   .modal-desc{
     order:2;
@@ -400,7 +379,6 @@ progress::-webkit-progress-value{
     top:260px;
   }
 }
-
 
 @media screen and (max-width: 1100px){
   .heading{
@@ -424,10 +402,6 @@ progress::-webkit-progress-value{
 }
 
 @media screen and (max-width:990px) {
-  .mastercraft{
-    left:47%;
-  }
-
   .container{
     min-width:98%;
     left: 2%;
@@ -473,10 +447,6 @@ progress::-webkit-progress-value{
   .reward-select{
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .reward-count{
-    order: 5;
   }
 
   .pledge-entry{
@@ -544,7 +514,6 @@ progress::-webkit-progress-value{
 
   .mastercraft{
     top:220px;
-    left:47%;
   }
 
   .nav-img, .nav-img-mob{
@@ -556,30 +525,19 @@ progress::-webkit-progress-value{
   }
 }
 
-@media screen and (max-width:500px){
-  /* .heading{
-    margin-top: 45px;
-  }  
-
-  .mastercraft{
-    top:75px;
-    left:45%;
-  } */
-}
-
 @media screen and (max-width: 405px) { 
   h5{
     font-size: 1rem;
   }
 
-  /* .heading{
+  .heading{
     margin-top: 25px;
   }  
 
   .mastercraft{
     top:55px;
     left:45%;
-  } */
+  }
 
   #back{
     display: none;
