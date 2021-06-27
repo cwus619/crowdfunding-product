@@ -9,7 +9,7 @@ Current version is just the basic layout of the webpage for dekstop. The next st
     - Ability to close modal box - complete   
 - Update numbers dynamically as pledges made - complete
 - Improving responsiveness - Work in progress between screen width 600px-900px
-- Creating mobile version - work in progress
+- Creating mobile version - complete
     - Modal boxes - complete
     - Navbar - complete
     - Bookmark button - complete 
