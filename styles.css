@@ -61,7 +61,7 @@ p{
   position: absolute;
   left: 50%;
   margin-left: -28px;
-  top:310px;
+  /* top:310px; */
   z-index: 2;
 }
 
@@ -81,10 +81,6 @@ p{
   margin-bottom: 20px;
   background-color: white;
   width:90%;
-}
-
-.heading{
-  margin-top: 280px;
 }
 
 .buttons{
@@ -349,17 +345,7 @@ progress::-webkit-progress-value{
   display:none;
 }
 
-/* @media screen and (max-width: 1325px){
-  .mastercraft{
-    top:300px;
-  }
-} */
-
 @media screen and (max-width: 1240px){
-  /* .mastercraft{
-    top:280px;
-  } */
-
   .modal-desc{
     order:2;
   }
@@ -370,26 +356,6 @@ progress::-webkit-progress-value{
   }
 }
 
-@media screen and (max-width: 1150px){
-  .heading{
-    margin-top: 225px;
-  }
-
-  .mastercraft{
-    top:260px;
-  }
-}
-
-@media screen and (max-width: 1100px){
-  .heading{
-    margin-top: 200px;
-  }
-
-  .mastercraft{
-    top:235px;
-  }
-}
-
 @media screen and (max-width:1035px) {
   .product-modal-title{
     flex-direction: column;
@@ -397,8 +363,7 @@ progress::-webkit-progress-value{
   }
   .pledge-modal{
     margin-left: 0;
-  }
-  
+  } 
 }
 
 @media screen and (max-width:990px) {
@@ -499,29 +464,13 @@ progress::-webkit-progress-value{
 
 }
 
-@media screen and (max-width: 600px) {  
+@media screen and (max-width: 660px) {  
   #bookmark{
     display: none;
   }
 
   .bookmark-mobile{
     display:initial;
-  }
-
-  .heading{
-    margin-top: 190px;   
-  }  
-
-  .mastercraft{
-    top:220px;
-  }
-
-  .nav-img, .nav-img-mob{
-    display: none;
-  }
-  
-  .nav-img-mob{
-    display: initial;
   }
 }
 
