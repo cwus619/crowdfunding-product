@@ -1,5 +1,5 @@
 # crowdfunding-product
-This is my solution to the crowdfunding product page challenge on frontend mentor - currently a WIP, which I'll be uploading in stages.
+This is my solution to the crowdfunding product page challenge on frontend mentor - this is now complete (but may be overhauled entirely in a not too distant future), and I will be uploading the new README document soon.
 
 ## Progress
 Current version is just the basic layout of the webpage for dekstop. The next steps I'll be working on:
@@ -8,16 +8,17 @@ Current version is just the basic layout of the webpage for dekstop. The next st
     - Success modal box - complete
     - Ability to close modal box - complete   
 - Update numbers dynamically as pledges made - complete
-- Improving responsiveness - Work in progress between screen width 600px-900px
+- Improving responsiveness - Complete
 - Creating mobile version - complete
     - Modal boxes - complete
     - Navbar - complete
     - Bookmark button - complete 
 - Logo at top of page - complete
+- README - WIP
 
 ### Further Details To Work On
-- Position of Mastercraft logo in mobile version
-- Mobile version - left appears before number remaining
+- Position of Mastercraft logo in mobile version - resolved
+- Mobile version - left appears before number remaining - resolved
 
 
 ## Link
