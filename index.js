@@ -1,10 +1,3 @@
-const navBg = document.querySelector(".nav-bg")
-const navImg = document.querySelector(".nav-img")
-
-console.log(navBg.offsetWidth)
-console.log(navBg.getBoundingClientRect())
-
-
 // main function
 function main(){
     // makeshift "database"
@@ -21,12 +14,57 @@ function main(){
     const backProjectBtns = document.querySelectorAll(".reward-btn");
     const closeBox = document.querySelector(".close");
     
-
+    setHeadingPosition();
     outOfStock(products, modalProducts);
     bookmarkPage(bookmark, mobBookmark);    
     modalBoxControl(backProjectBtns, closeBox);
     radioForm(productCount, products, modalProducts);
     closeSuccess();
+    hamburgerControl();
+}
+
+// set position of heading and mastercraft logo
+function setHeadingPosition(){
+    const navBg = document.querySelector(".nav-bg")
+    const navImg = document.querySelector(".nav-img")
+    const navImgMob = document.querySelector(".nav-img-mob")
+    const mastercraft = document.querySelector(".mastercraft")
+    const heading = document.querySelector(".heading")
+    
+    bgImgControl(navImg, navImgMob, mastercraft, heading);
+    if (navImg.offsetHeight <= 318 && navImg.style.display === "flex"){
+        mastercraft.style.top = `140px`
+        heading.style.marginTop = `110px`        
+    } else{
+        mastercraft.style.top = `${navBg.offsetHeight - 178}px`
+        heading.style.marginTop = `${navBg.offsetHeight - 208}px`
+    }
+    
+    window.addEventListener("resize", function(){
+        bgImgControl(navImg, navImgMob, mastercraft, heading)   
+        if (navImg.style.display === "initial"){
+            if (navImg.offsetHeight > 318){
+                mastercraft.style.top = `${navBg.offsetHeight - 178}px`
+                heading.style.marginTop = `${navBg.offsetHeight - 208}px`
+            } else {
+                mastercraft.style.top = `140px`
+                heading.style.marginTop = `110px`  
+            }
+        }
+    })
+}
+
+function bgImgControl(navImg, navImgMob, mastercraft, heading, navbg){
+    if (window.innerWidth > 660){
+        navImg.style.display = "initial";
+        navImgMob.style.display = "none";
+    } else {
+        navImg.style.display = "none";
+        navImgMob.style.display = "initial";
+        mastercraft.style.top = "220px";
+        heading.style.marginTop = "190px";
+
+    }
 }
 
 // dynamically grey out any sold out items
@@ -208,17 +246,19 @@ function incrementCurrent(form){
     current.innerHTML = currentValue;
 }
 
-// Put into a function
-const hamburger = document.querySelector(".hamburger");
-const closeMenu = document.querySelector(".close-menu");
-hamburger.addEventListener("click", function(){
-    console.log("HAMBURGER CLICKED!");
-    document.querySelector(".menu-bg").style.display="flex";
-    // hamburger.style.display="none";
-})
-closeMenu.addEventListener("click", function(){
-    document.querySelector(".menu-bg").style.display="none";
-    // hamburger.style.display="initial";
-})
+// Open menu when hamburger clicked
+function hamburgerControl(){
+    const hamburger = document.querySelector(".hamburger");
+    const closeMenu = document.querySelector(".close-menu");
+    hamburger.addEventListener("click", function(){
+        console.log("HAMBURGER CLICKED!");
+        document.querySelector(".menu-bg").style.display="flex";
+        // hamburger.style.display="none";
+    })
+    closeMenu.addEventListener("click", function(){
+        document.querySelector(".menu-bg").style.display="none";
+        // hamburger.style.display="initial";
+    })
+}
 
 main();
