@@ -64,9 +64,6 @@ I feel increasingly confident with my understanding and use of vanilla JS. There
 - [Bootstrap](https://getbootstrap.com/) - As time went by, I reduced my dependence on Bootstrap, but have retained some use of it. Naturally, the Bootstrap website was the best guide for understanding and using Bootstrap classes.
 - [CSS Tricks - HTML5 Progress Element](https://css-tricks.com/html5-progress-element/) - As can be seen from previous projects, I'm a huge fan of CSS Tricks and this guide was no exception to the other guides - this one helped me immensely with understanding how to make use of and customise the progress bar.
 
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
 - Frontend Mentor - [@cwus619](https://www.frontendmentor.io/profile/cwus619)
